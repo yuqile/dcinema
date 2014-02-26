@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:background="@drawable/souso_bg"
+    android:orientation="vertical"
+    android:paddingLeft="30.0dip"
+    android:paddingRight="30.0dip" >
+
+    <TextView
+        android:id="@id/keypad_input"
+        android:layout_width="274.0dip"
+        android:layout_height="50.0dip"
+        android:layout_marginBottom="10.0dip"
+        android:layout_marginTop="25.0dip"
+        android:background="@drawable/so_box"
+        android:ellipsize="start"
+        android:focusable="false"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:textColor="#ff000000"
+        android:textSize="28.0sp" />
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*" >
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@id/keypad_A"
+                style="@style/keyPadButton"
+                android:text="A" />
+
+            <Space
+                android:layout_width="6.0dip"
+                android:layout_height="6.0dip" />
+
+            <Button
+                android:id="@id/keypad_B"
+                style="@style/keyPadButton"
+                android:text="B" />
+
+            <Space
+                android:layout_width="6.0dip"
+                android:layout_height="6.0dip" />
+
+            <Button
+                android:id="@id/keypad_C"
+                style="@style/keyPadButton"
+                android:text="C" />
+
+            <Space
+                android:layout_width="6.0dip"
+                android:layout_height="6.0dip" />
+
+            <Button
+                android:id="@id/keypad_D"
+                style="@style/keyPadButton"
+                android:text="D" />
+
+            <Space
+                android:layout_width="6.0dip"
+                android:layout_height="6.0dip" />
+
+            <Button
+                android:id="@id/keypad_E"
+                style="@style/keyPadButton"
+                android:text="E" />
+        </TableRow>
+
+        <TableRow>
+
+            <Space
+                android:layout_width="6.0dip"
+                android:layout_height="6.0dip" />
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:id="@id/keypad_F"
+                style="@style/keyPadButton"
+                android:text="F" />
+
+            <Space
+                android:layout_width="6.0dip"
+                android:layout_height="6.0dip" />
+
+            <Button
+                android:id="@id/keypad_G"
+                style="@style/keyPadButton"
+                android:text="G" />
+
+            <Space
+                android:layout_width="6.0dip"
+                android:layout_height="6.0dip" />
+
+            <Button
+                android:id="@id/keypad_H"
+                style="@style/keyPadButton"
+                android:text="H" />
+
+            <Space
+                android:layout_width="6.0dip"
+                android:layout_height="6.0dip" />
+
+            <Button
+                android:id="@id/keypad_I"
+                style="@style/keyPadButton"
+                android:text="I" />
+
+            <Space
+                android:layout_width="6.0dip"
+                android:layout_height="6.0dip" />
+
+            <Button
+                android:id="@id/keypad_J"
+                style="@style/keyPadButton"
+                android:text="J" />
+        </TableRow>
+
+        <TableRow>
+
+            <Space
+                android:layout_width="6.0dip"
+                android:layout_height="6.0dip" />
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:id="@id/keypad_K"
+                style="@style/keyPadButton"
+                android:text="K" />
+
+            <Space
+                android:layout_width="6.0dip"
+                android:layout_height="6.0dip" />
+
+            <Button
+                android:id="@id/keypad_L"
+                style="@style/keyPadButton"
+                android:text="L" />
+
+            <Space
+                android:layout_width="6.0dip"
+                android:layout_height="6.0dip" />
+
+            <Button
+                android:id="@id/keypad_M"
+                style="@style/keyPadButton"
+                android:text="M" />
+
+            <Space
+                android:layout_width="6.0dip"
+                android:layout_height="6.0dip" />
+
+            <Button
+                android:id="@id/keypad_N"
+                style="@style/keyPadButton"
+                android:text="N" />
+
+            <Space
+                android:layout_width="6.0dip"
+                android:layout_height="6.0dip" />
+
+            <Button
+                android:id="@id/keypad_O"
+                style="@style/keyPadButton"
+                android:text="O" />
+        </TableRow>
+
+        <TableRow>
+
+            <Space
+                android:layout_width="6.0dip"
+                android:layout_height="6.0dip" />
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:id="@id/keypad_P"
+                style="@style/keyPadButton"
+                android:text="P" />
+
+            <Space
+                android:layout_width="6.0dip"
+                android:layout_height="6.0dip" />
+
+            <Button
+                android:id="@id/keypad_Q"
+                style="@style/keyPadButton"
+                android:text="Q" />
+
+            <Space
+                android:layout_width="6.0dip"
+                android:layout_height="6.0dip" />
+
+            <Button
+                android:id="@id/keypad_R"
+                style="@style/keyPadButton"
+                android:text="R" />
+
+            <Space
+                android:layout_width="6.0dip"
+                android:layout_height="6.0dip" />
+
+            <Button
+                android:id="@id/keypad_S"
+                style="@style/keyPadButton"
+                android:text="S" />
+
+            <Space
+                android:layout_width="6.0dip"
+                android:layout_height="6.0dip" />
+
+            <Button
+                android:id="@id/keypad_T"
+                style="@style/keyPadButton"
+                android:text="T" />
+        </TableRow>
+
+        <TableRow>
+
+            <Space
+                android:layout_width="6.0dip"
+                android:layout_height="6.0dip" />
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:id="@id/keypad_U"
+                style="@style/keyPadButton"
+                android:text="U" />
+
+            <Space
+                android:layout_width="6.0dip"
+                android:layout_height="6.0dip" />
+
+            <Button
+                android:id="@id/keypad_V"
+                style="@style/keyPadButton"
+                android:text="V" />
+
+            <Space
+                android:layout_width="6.0dip"
+                android:layout_height="6.0dip" />
+
+            <Button
+                android:id="@id/keypad_W"
+                style="@style/keyPadButton"
+                android:text="W" />
+
+            <Space
+                android:layout_width="6.0dip"
+                android:layout_height="6.0dip" />
+
+            <Button
+                android:id="@id/keypad_X"
+                style="@style/keyPadButton"
+                android:text="X" />
+
+            <Space
+                android:layout_width="6.0dip"
+                android:layout_height="6.0dip" />
+
+            <Button
+                android:id="@id/keypad_Y"
+                style="@style/keyPadButton"
+                android:text="Y" />
+        </TableRow>
+
+        <TableRow>
+
+            <Space
+                android:layout_width="6.0dip"
+                android:layout_height="6.0dip" />
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:id="@id/keypad_Z"
+                style="@style/keyPadButton"
+                android:text="Z" />
+
+            <Space
+                android:layout_width="6.0dip"
+                android:layout_height="6.0dip" />
+
+            <Button
+                android:id="@id/keypad_0"
+                style="@style/keyPadButton"
+                android:text="0" />
+
+            <Space
+                android:layout_width="6.0dip"
+                android:layout_height="6.0dip" />
+
+            <Button
+                android:id="@id/keypad_1"
+                style="@style/keyPadButton"
+                android:text="1" />
+
+            <Space
+                android:layout_width="6.0dip"
+                android:layout_height="6.0dip" />
+
+            <Button
+                android:id="@id/keypad_2"
+                style="@style/keyPadButton"
+                android:text="2" />
+
+            <Space
+                android:layout_width="6.0dip"
+                android:layout_height="6.0dip" />
+
+            <Button
+                android:id="@id/keypad_3"
+                style="@style/keyPadButton"
+                android:text="3" />
+        </TableRow>
+
+        <TableRow>
+
+            <Space
+                android:layout_width="6.0dip"
+                android:layout_height="6.0dip" />
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:id="@id/keypad_4"
+                style="@style/keyPadButton"
+                android:text="4" />
+
+            <Space
+                android:layout_width="6.0dip"
+                android:layout_height="6.0dip" />
+
+            <Button
+                android:id="@id/keypad_5"
+                style="@style/keyPadButton"
+                android:text="5" />
+
+            <Space
+                android:layout_width="6.0dip"
+                android:layout_height="6.0dip" />
+
+            <Button
+                android:id="@id/keypad_6"
+                style="@style/keyPadButton"
+                android:text="6" />
+
+            <Space
+                android:layout_width="6.0dip"
+                android:layout_height="6.0dip" />
+
+            <Button
+                android:id="@id/keypad_7"
+                style="@style/keyPadButton"
+                android:text="7" />
+
+            <Space
+                android:layout_width="6.0dip"
+                android:layout_height="6.0dip" />
+
+            <Button
+                android:id="@id/keypad_8"
+                style="@style/keyPadButton"
+                android:text="8" />
+        </TableRow>
+
+        <TableRow>
+
+            <Space
+                android:layout_width="6.0dip"
+                android:layout_height="6.0dip" />
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:id="@id/keypad_9"
+                style="@style/keyPadButton"
+                android:text="9" />
+
+            <Space
+                android:layout_width="6.0dip"
+                android:layout_height="6.0dip" />
+
+            <Button
+                android:id="@id/keypad_SPACE"
+                android:layout_width="50.0dip"
+                android:layout_height="50.0dip"
+                android:background="@drawable/keypad_space_selector"
+                android:gravity="center"
+                android:textColor="#ff999999"
+                android:textSize="32.0dip" />
+
+            <Space
+                android:layout_width="6.0dip"
+                android:layout_height="6.0dip" />
+
+            <Button
+                android:id="@id/keypad_CLEAR"
+                android:layout_width="50.0dip"
+                android:layout_height="50.0dip"
+                android:background="@drawable/keypad_clear_selector"
+                android:gravity="center"
+                android:textColor="#ff999999"
+                android:textSize="32.0dip" />
+
+            <Space
+                android:layout_width="6.0dip"
+                android:layout_height="6.0dip" />
+
+            <Button
+                android:id="@id/keypad_EN_CH"
+                android:layout_width="50.0dip"
+                android:layout_height="50.0dip"
+                android:background="@drawable/keypad_ench_selector"
+                android:gravity="center"
+                android:textColor="#ff999999"
+                android:textSize="32.0dip" />
+
+            <Space
+                android:layout_width="6.0dip"
+                android:layout_height="6.0dip" />
+
+            <Button
+                android:id="@id/keypad_BACK"
+                android:layout_width="50.0dip"
+                android:layout_height="50.0dip"
+                android:background="@drawable/keypad_back_selector"
+                android:gravity="center"
+                android:textColor="#ff999999"
+                android:textSize="32.0dip" />
+        </TableRow>
+
+        <TableRow>
+
+            <Space
+                android:layout_width="6.0dip"
+                android:layout_height="6.0dip" />
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:id="@id/search_result_null"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:text="@string/prepare_search"
+        android:textColor="@color/detail_point"
+        android:textSize="24.0dip" />
+
+</LinearLayout>

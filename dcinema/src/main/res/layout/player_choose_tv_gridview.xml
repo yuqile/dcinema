@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.leo.leolauncher.view.ExpendGridView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/player_choose_tv_gridView"
+    android:layout_width="620.0dip"
+    android:layout_height="350.0dip"
+    android:focusable="false"
+    android:focusableInTouchMode="false"
+    android:horizontalSpacing="5.0dip"
+    android:numColumns="5"
+    android:scrollbars="none"
+    android:verticalSpacing="5.0dip" />

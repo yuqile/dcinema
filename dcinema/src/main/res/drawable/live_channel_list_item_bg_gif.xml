@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list android:oneshot="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="50" android:drawable="@drawable/live_channel_list_item_bg_gif1" />
+    <item android:duration="50" android:drawable="@drawable/live_channel_list_item_bg_gif2" />
+    <item android:duration="50" android:drawable="@drawable/live_channel_list_item_bg_gif3" />
+    <item android:duration="50" android:drawable="@drawable/live_channel_list_item_bg_gif4" />
+    <item android:duration="50" android:drawable="@drawable/live_channel_list_item_bg_gif5" />
+    <item android:duration="50" android:drawable="@drawable/live_channel_list_item_bg_gif6" />
+    <item android:duration="50" android:drawable="@drawable/live_channel_list_item_bg_gif7" />
+    <item android:duration="50" android:drawable="@drawable/live_channel_list_item_bg_gif8" />
+    <item android:duration="50" android:drawable="@drawable/live_channel_list_item_bg_gif9" />
+    <item android:duration="50" android:drawable="@drawable/live_channel_list_item_bg_gif10" />
+    <item android:duration="50" android:drawable="@drawable/live_channel_list_item_bg_gif11" />
+    <item android:duration="50" android:drawable="@drawable/live_channel_list_item_bg_gif12" />
+    <item android:duration="50" android:drawable="@drawable/live_channel_list_item_bg_gif13" />
+    <item android:duration="50" android:drawable="@drawable/live_channel_list_item_bg_gif14" />
+    <item android:duration="50" android:drawable="@drawable/live_channel_list_item_bg_gif15" />
+    <item android:duration="50" android:drawable="@drawable/live_channel_list_item_bg_gif16" />
+    <item android:duration="50" android:drawable="@drawable/live_channel_list_item_bg_gif17" />
+    <item android:duration="50" android:drawable="@drawable/live_channel_list_item_bg_gif18" />
+    <item android:duration="50" android:drawable="@drawable/live_channel_list_item_bg_gif19" />
+    <item android:duration="50" android:drawable="@drawable/live_channel_list_item_bg_gif20" />
+</animation-list>

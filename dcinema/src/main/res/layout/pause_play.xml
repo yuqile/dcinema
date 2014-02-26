@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@id/pause_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <ImageView
+            android:id="@id/function_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/function_select" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/function_select"
+            android:layout_centerHorizontal="true"
+            android:text="画质"
+            android:textColor="#ffffffff"
+            android:textSize="30.0sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/function_select"
+            android:layout_centerHorizontal="true"
+            android:text="选集"
+            android:textColor="#ffffffff"
+            android:textSize="30.0sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/function_select"
+            android:layout_centerVertical="true"
+            android:maxEms="1"
+            android:text="快退"
+            android:textColor="#ffffffff"
+            android:textSize="30.0sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/function_select"
+            android:layout_centerVertical="true"
+            android:maxEms="1"
+            android:text="快进"
+            android:textColor="#ffffffff"
+            android:textSize="30.0sp" />
+
+        <ImageButton
+            android:id="@id/pause_or_paly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="#00ffffff"
+            android:src="@drawable/pause" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/top"
+            android:gravity="center"
+            android:text="画质"
+            android:textColor="#ffffffff"
+            android:textSize="30.0sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/bottom"
+            android:gravity="center"
+            android:text="选集"
+            android:textColor="#ffffffff"
+            android:textSize="30.0sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/left"
+            android:ems="1"
+            android:gravity="center"
+            android:paddingLeft="1.0dip"
+            android:text="快退"
+            android:textColor="#ffffffff"
+            android:textSize="30.0sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/right"
+            android:gravity="center"
+            android:maxEms="1"
+            android:paddingRight="1.0dip"
+            android:text="快进"
+            android:textColor="#ffffffff"
+            android:textSize="30.0sp" />
+    </RelativeLayout>
+
+</FrameLayout>

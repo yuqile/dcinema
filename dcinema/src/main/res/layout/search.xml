@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/video_details_bg" >
+
+    <include
+        android:id="@id/search_keyPad"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        layout="@layout/search_keypad" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35.0dip"
+            android:layout_marginTop="10.0dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/search_allline"
+                android:textColor="@color/white"
+                android:textSize="24.0sp" />
+
+            <ImageView
+                android:layout_width="2.0dip"
+                android:layout_height="35.0dip"
+                android:layout_marginLeft="5.0dip"
+                android:layout_marginRight="5.0dip"
+                android:background="#ffb2b2b2" />
+
+            <TextView
+                android:id="@id/search_sum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="20.0dip"
+                android:text="总共0部"
+                android:textColor="#ff404040"
+                android:textSize="16.0sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1.0dip"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="5.0dip"
+            android:layout_marginLeft="35.0dip"
+            android:layout_marginRight="35.0dip"
+            android:layout_marginTop="5.0dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/line760" />
+
+        <GridView
+            android:id="@id/search_result"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="30.0dip"
+            android:layout_marginRight="35.0dip"
+            android:focusableInTouchMode="true"
+            android:numColumns="4"
+            android:scrollbars="none"
+            android:verticalSpacing="20.0dip" />
+
+        <TextView
+            android:id="@id/serch_emptey_text"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="暂无搜索结果"
+            android:textColor="#ffffffff"
+            android:textSize="30.0sp" />
+    </LinearLayout>
+
+</LinearLayout>

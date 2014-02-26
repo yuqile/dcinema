@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:id="@id/type_details"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/video_details_bg"
+        android:orientation="vertical"
+        android:paddingLeft="35.0dip"
+        android:paddingRight="35.0dip"
+        android:paddingTop="10.0dip" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@id/type_details_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#ffb2b2b2"
+                android:textSize="30.0dip" />
+
+            <ImageView
+                android:layout_width="2.0dip"
+                android:layout_height="35.0dip"
+                android:layout_marginLeft="5.0dip"
+                android:layout_marginRight="5.0dip"
+                android:background="#ffb2b2b2" />
+
+            <TextView
+                android:id="@id/type_details_sum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="20.0dip"
+                android:text="@string/type_details_sum"
+                android:textColor="#ff404040"
+                android:textSize="18.0dip" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@id/type_details_menuHint_ll"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@id/type_details_fliter_type"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text=""
+                android:textColor="#ff999999"
+                android:textSize="18.0dip" />
+
+            <ImageView
+                android:id="@id/detail_menu_key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:src="@drawable/menu_key" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5.0dip"
+                android:text="@string/type_details_menu_hint"
+                android:textColor="#ff999999"
+                android:textSize="18.0dip" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1.0dip"
+            android:layout_marginBottom="5.0dip"
+            android:layout_marginTop="5.0dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/line760" />
+
+        <GridView
+            android:id="@id/type_details_grid"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:numColumns="6"
+            android:scrollbars="none"
+            android:smoothScrollbar="true" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@id/white_border"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_border"
+        android:visibility="invisible" />
+
+    <include
+        android:id="@id/type_details_menulayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/type_details_filter"
+        android:visibility="gone" />
+
+</FrameLayout>

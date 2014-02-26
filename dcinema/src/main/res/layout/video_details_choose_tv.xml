@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/video_detail_key_bg"
+    android:orientation="vertical" >
+
+    <android.support.v4.view.ViewPager
+        android:id="@id/details_key_pager"
+        android:layout_width="fill_parent"
+        android:layout_height="55.0dip"
+        android:layout_marginBottom="30.0dip"
+        android:layout_marginLeft="40.0dip"
+        android:layout_marginTop="70.0dip" />
+
+    <Gallery
+        android:id="@id/details_key_gallery"
+        android:layout_width="fill_parent"
+        android:layout_height="55.0dip"
+        android:layout_marginBottom="10.0dip"
+        android:layout_marginLeft="40.0dip"
+        android:layout_marginRight="40.0dip"
+        android:spacing="0.0dip"
+        android:unselectedAlpha="1.0" />
+
+</LinearLayout>

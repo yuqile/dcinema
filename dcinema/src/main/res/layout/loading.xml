@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <cn.leo.dcinema.player.VideoView
+        android:id="@id/vod_player_videoView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center" />
+
+    <FrameLayout
+        android:id="@+id/loading_main_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/main_bg" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="200.0dip"
+            android:src="@drawable/loading_circle_01" />
+
+        <ImageView
+            android:id="@+id/loading_cir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="220.0dip"
+            android:src="@drawable/loading_circle_02" />
+
+        <ImageView
+            android:id="@+id/loading_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="296.0dip"
+            android:src="@drawable/loading_num_bufgif" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="536.0dip"
+            android:text="@string/type_loading_text"
+            android:textColor="@color/white"
+            android:textSize="28.0dip" />
+
+        <ImageButton
+            android:id="@+id/loadding_again"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="580.0dip"
+            android:background="@drawable/loading"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:src="@drawable/loading_again"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="300.0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="200.0dip"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@id/vod_player_filmname_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="28.0dip" />
+
+            <TextView
+                android:id="@id/vod_player_filmset_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20.0dip"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="25.0dip" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/loading_error_tips"
+            android:layout_width="300.0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="900.0dip"
+            android:text="@string/loading_error"
+            android:textColor="@color/red"
+            android:textSize="32.0sp"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</FrameLayout>

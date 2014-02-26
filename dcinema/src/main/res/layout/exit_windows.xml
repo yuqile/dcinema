@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/exit_dialog_bg_shape"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@id/player_exist_exit_bt"
+        style="@style/exit_window_btn"
+        android:layout_marginBottom="10.0dip"
+        android:background="@drawable/exist_button_bg_selector"
+        android:drawableLeft="@drawable/exist_button_img_exist"
+        android:text="退出视频" />
+
+    <Button
+        android:id="@id/player_exist_play_bt"
+        style="@style/exit_window_btn"
+        android:layout_marginBottom="10.0dip"
+        android:background="@drawable/exist_button_bg_selector"
+        android:drawableLeft="@drawable/exist_button_img_play"
+        android:text="继续播放" />
+
+    <Button
+        android:id="@id/player_exist_next_bt"
+        style="@style/exit_window_btn"
+        android:layout_marginBottom="10.0dip"
+        android:background="@drawable/exist_button_bg_selector"
+        android:drawableLeft="@drawable/exist_button_img_next"
+        android:text="跳下一集" />
+
+    <Button
+        android:id="@id/player_exist_fav_bt"
+        style="@style/exit_window_btn"
+        android:background="@drawable/exist_button_bg_selector"
+        android:drawableLeft="@drawable/exist_button_img_fav"
+        android:text="收藏追剧" />
+
+</LinearLayout>

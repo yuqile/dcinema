@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/loading_ing_opt" android:state_focused="false"></item>
+	<item android:drawable="@drawable/loading_ing_opt" android:state_pressed="true"></item>
+	<item android:drawable="@drawable/loading_ing_notopt"></item>
+</selector>

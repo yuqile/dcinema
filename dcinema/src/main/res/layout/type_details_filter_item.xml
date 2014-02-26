@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="180.0dip"
+    android:layout_height="40.0dip"
+    android:background="@drawable/filter_bg_selector" >
+
+    <TextView
+        android:id="@id/filter_name"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="24.0dip" />
+
+    <ImageView
+        android:id="@id/filter_gou"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="5.0dip"
+        android:contentDescription="@null"
+        android:src="@drawable/fliter_gou"
+        android:visibility="invisible" />
+
+</FrameLayout>

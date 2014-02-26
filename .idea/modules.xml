@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/dcinema.iml" filepath="$PROJECT_DIR$/dcinema.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dcinema/dcinema-dcinema.iml" filepath="$PROJECT_DIR$/dcinema/dcinema-dcinema.iml" />
+    </modules>
+  </component>
+</project>
+
