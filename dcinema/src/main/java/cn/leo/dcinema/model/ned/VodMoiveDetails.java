@@ -2,55 +2,52 @@ package cn.leo.dcinema.model.ned;
 
 import java.util.ArrayList;
 
-import org.codehaus.jackson.annotate.JsonProperty;
-
 public class VodMoiveDetails {
-	public static class Related {
-		public String name;
-		public int iptvAlbumId;
-		public int categoryId;
-		public String releaseDate;
-		public String bigImage;
-		public String smallImage;
-		public String thumbnailImage;
-		public String detailUrl;
-	}
+    public String actors;
+    public String area;
+    public int areaId;
+    public String category;
+    public String directors;
+    public boolean ended;
+    public String englishName;
+    public int episodeNum;
+    public int id;
+    public int isHDTV;
+    public String name;
+    public String period;
+    public String plot;
+    public String poster1;
+    public String poster2;
+    public String poster3;
+    public String poster4;
+    public String poster5;
+    public String poster6;
+    public String poster7;
+    public String poster8;
+    public String postorgin;
+    public String releaseYear;
+    public String score;
+    public String type;
 
-	public static class D3Type {
-		public String names[];
-		public String series[];
-
-	}
-
-	public static class Streams {
-		@JsonProperty("3d720p")
-		public D3Type d720p;
-		@JsonProperty("3d1080p6m")
-		public D3Type d1080p6m;
-	}
-
-	public static class Data {
-		public ArrayList<Related> relatedAlbum;
-		public ArrayList<Related> actorRelated;
-		public ArrayList<Related> directorRelated;
-		public Streams streams;
-
-		public String name;
-		public String description;
-		public String duration;
-		public String subCategories;
-		public int iptvAlbumId;
-		public int categoryId;
-		public String area;
-		public String rating;
-		public String releaseDate;
-		public String bigImage;
-		public String smallImage;
-		public String thumbnailImage;
-		public String directors;
-		public String actors;
-		public String lookpoint;
-	}
-
-	public Data data;
+    public static class Video {
+        public String actors;
+        public String area;
+        public int areaId;
+        public String directors;
+        public String fhdtv;
+        public String hdtv;
+        public int id;
+        public int ldtv;
+        public String name;
+        public String period;
+        public String plot;
+        public String poster1;
+        public String poster2;
+        public String poster3;
+        public String poster4;
+        public String releaseYear;
+        public String score;
+        public int sdtv;
+    }
+    public ArrayList<Video> videos;
 }

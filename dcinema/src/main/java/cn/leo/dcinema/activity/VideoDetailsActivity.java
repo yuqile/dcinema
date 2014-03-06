@@ -570,7 +570,6 @@ public class VideoDetailsActivity extends BaseActivity implements
 				playRecode.setIndex = 0;
 				playRecode.positon = 0;
 				bundle.putSerializable("playinfo", playRecode);
-				Log.i("info", playRecode.toString());
 				intent.putExtra("VODEXTRA", bundle);
 				startActivity(intent);
 			}
@@ -604,7 +603,6 @@ public class VideoDetailsActivity extends BaseActivity implements
 					playRecode.positon = 0;
 				}
 				bundle.putSerializable("playinfo", playRecode);
-				Log.i("info", playRecode.toString());
 				intent.putExtra("VODEXTRA", bundle);
 				startActivity(intent);
 			}
