@@ -38,56 +38,44 @@ public class VodMovieDetailsBiz {
             videoDetailInfo.info = vodinfo.plot;
             videoDetailInfo.recommends = new ArrayList<VideoInfo>();
             videoDetailInfo.type = Constants.KEY_MOVIE;
+
+            videoDetailInfo.playlist = new ArrayList<VideoSource>();
             if (vodinfo.videos != null) {
                 for (VodMoiveDetails.Video item : vodinfo.videos) {
-                    VideoInfo info = new VideoInfo();
-                    info.id = item.id;
-                    info.img = item.poster1;
-                    info.logo = item.poster3;
-                    videoDetailInfo.recommends.add(info);
+                    if (item.hdtv != null && !item.hdtv.equals("")) {
+                        VideoSource source = new VideoSource();
+                        source.sourceName = VodMovieAddrBiz.KEY_3D720P;
+                        source.sets = new ArrayList<VideoSet>();
+                        VideoSet set = new VideoSet();
+                        String url = new StringBuffer()
+                                .append(VodMovieAddrBiz.VodMovieAddrGetUrl)
+                                .append(item.id).append(VodMovieAddrBiz.KEY_TON)
+                                .append(item.hdtv).append(VodMovieAddrBiz.KEY_TON_QUESTION)
+                                .append(VodMovieAddrBiz.KEY_SERIES).append(VodMovieAddrBiz.TOKEN_STR)
+                                .append(VodMovieAddrBiz.KEY_TOTAL)
+                                .toString();
+                        set.link = url;
+                        source.sets.add(set);
+                        videoDetailInfo.playlist.add(source);
+                    }
+                    if (item.fhdtv != null && !item.fhdtv.equals("")) {
+                        VideoSource source = new VideoSource();
+                        source.sourceName = VodMovieAddrBiz.KEY_3D1080P;
+                        source.sets = new ArrayList<VideoSet>();
+                        VideoSet set = new VideoSet();
+                        String url = new StringBuffer()
+                                .append(VodMovieAddrBiz.VodMovieAddrGetUrl)
+                                .append(item.id).append(VodMovieAddrBiz.KEY_TON)
+                                .append(item.fhdtv).append(VodMovieAddrBiz.KEY_TON_QUESTION)
+                                .append(VodMovieAddrBiz.KEY_SERIES).append(VodMovieAddrBiz.TOKEN_STR)
+                                .append(VodMovieAddrBiz.KEY_TOTAL)
+                                .toString();
+                        set.link = url;
+                        source.sets.add(set);
+                        videoDetailInfo.playlist.add(source);
+                    }
                 }
             }
-
-            /*
-            videoDetailInfo.playlist = new ArrayList<VideoSource>();
-            if (vodinfo.data.streams.d720p != null) {
-                VideoSource source = new VideoSource();
-                source.sourceName = VodMovieAddrBiz.KEY_3D720P;
-
-                source.sets = new ArrayList<VideoSet>();
-                VideoSet set = new VideoSet();
-                String url = new StringBuffer()
-                        .append(VodMovieAddrBiz.VodMovieAddrGetUrl)
-                        .append(VodMovieAddrBiz.KEY_IPTV_ALBUMID)
-                        .append(iptvAlbumId).append(VodMovieAddrBiz.TOKEN_STR)
-                        .append(VodMovieAddrBiz.KEY_STREAM)
-                        .append(source.sourceName)
-                        .append(VodMovieAddrBiz.TOKEN_STR)
-                        .append(VodMovieAddrBiz.KEY_SERIES).append(series)
-                        .toString();
-                set.link = url;
-                source.sets.add(set);
-                videoDetailInfo.playlist.add(source);
-            }
-            if (vodinfo.data.streams.d1080p6m != null) {
-                VideoSource source = new VideoSource();
-                source.sourceName = VodMovieAddrBiz.KEY_3D1080P;
-                source.sets = new ArrayList<VideoSet>();
-                VideoSet set = new VideoSet();
-                String url = new StringBuffer()
-                        .append(VodMovieAddrBiz.VodMovieAddrGetUrl)
-                        .append(VodMovieAddrBiz.KEY_IPTV_ALBUMID)
-                        .append(iptvAlbumId).append(VodMovieAddrBiz.TOKEN_STR)
-                        .append(VodMovieAddrBiz.KEY_STREAM)
-                        .append(source.sourceName)
-                        .append(VodMovieAddrBiz.TOKEN_STR)
-                        .append(VodMovieAddrBiz.KEY_SERIES).append(series)
-                        .toString();
-                set.link = url;
-                source.sets.add(set);
-                videoDetailInfo.playlist.add(source);
-            }
-            */
         }
         return videoDetailInfo;
     }
