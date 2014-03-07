@@ -73,6 +73,7 @@
     <orderEntry type="library" exported="" name="dom4j" level="project" />
     <orderEntry type="library" exported="" name="appcompat-v7-19.0.1" level="project" />
     <orderEntry type="library" exported="" name="jackson-all-1.9.11" level="project" />
+    <orderEntry type="library" exported="" name="ksoap2-android-assembly-2.5.8-jar-with-dependencies" level="project" />
     <orderEntry type="library" exported="" name="support-v4-19.0.1" level="project" />
     <orderEntry type="library" exported="" name="umeng_sdk" level="project" />
     <orderEntry type="library" exported="" name="jaxen-1.1" level="project" />

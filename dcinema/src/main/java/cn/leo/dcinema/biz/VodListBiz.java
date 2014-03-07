@@ -63,6 +63,7 @@ public class VodListBiz {
                 .append(KEY_SEARCHZZALBUM).append(TOKEN_STR)
                 .append(KEY_PAGESIZE).append(pageSize).toString();
         Log.d(TAG, (new StringBuffer("url=")).append(url).toString());
+
         String s1 = HttpUtils.getContent(url, null, null);
         if (s1 != null) {
             try {
