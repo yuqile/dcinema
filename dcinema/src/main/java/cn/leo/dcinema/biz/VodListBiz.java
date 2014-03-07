@@ -35,7 +35,11 @@ public class VodListBiz {
             videolist = new VideoList();
             videolist.video_count = vodlist.total;
             videolist.zurpage = page;
-            videolist.maxpage = (int) (vodlist.total / pageSize);
+            if (vodlist.total % pageSize == 0) {
+                videolist.maxpage = (int) (vodlist.total / pageSize);
+            } else {
+                videolist.maxpage = (int) (vodlist.total / pageSize) + 1;
+            }
             videolist.punpage = pageSize;
             videolist.video = new ArrayList<VideoInfo>();
             for (VodList.VideoInfo item : vodlist.albums) {
