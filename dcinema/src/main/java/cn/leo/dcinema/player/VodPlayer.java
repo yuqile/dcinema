@@ -18,7 +18,7 @@ import android.view.animation.Animation.AnimationListener;
 import android.view.animation.AnimationSet;
 import android.view.animation.AnimationUtils;
 import android.widget.*;
-
+import cn.leo.dcinema.Constants;
 import cn.leo.dcinema.R;
 import cn.leo.dcinema.activity.BaseActivity;
 import cn.leo.dcinema.adapters.PlayerChooseArtAdapter;
@@ -256,7 +256,8 @@ public class VodPlayer extends BaseActivity implements
         runnable = new Runnable() {
 
             public void run() {
-                Log.d(TAG, "runnable get VOD PlayUri");
+                if (Constants.DEBUG)
+                    Log.d(TAG, "runnable get VOD PlayUri");
                 VodPlayer vodplayer = VodPlayer.this;
                 vodplayer.hdHeadValue = -1 + vodplayer.hdHeadValue;
                 // ArrayList<VideoPlayUrl> arraylist = vodBiz.getPlayUris(
@@ -306,8 +307,9 @@ public class VodPlayer extends BaseActivity implements
                     case MSG_SELECTSOURCE:
                         playRecode.sourceIndex = message.arg1;
                         playRecode.positon = mVideoView.getCurrentPosition();
-                        Log.i(TAG, (new StringBuilder("MSG_SELECTSOURCE ="))
-                                .append(playRecode.sourceIndex).toString());
+                        if (Constants.DEBUG)
+                            Log.i(TAG, (new StringBuilder("MSG_SELECTSOURCE ="))
+                                    .append(playRecode.sourceIndex).toString());
                         VideoSource videosource = (VideoSource) media.playlist
                                 .get(playRecode.sourceIndex);
                         menuContrl.setVideoSources(playRecode.sourceIndex);
@@ -329,9 +331,10 @@ public class VodPlayer extends BaseActivity implements
                         break;
                     case MSG_PLAY:
                         playUrl = (String) message.obj;
-                        Log.d(TAG,
-                                (new StringBuilder("paly url = ")).append(
-                                        message.obj).toString());
+                        if (Constants.DEBUG)
+                            Log.d(TAG,
+                                    (new StringBuilder("paly url = ")).append(
+                                            message.obj).toString());
                         if (playUrl != null) {
                             if (message.arg1 > 0)
                                 playRecode.positon = message.arg1;
@@ -516,7 +519,8 @@ public class VodPlayer extends BaseActivity implements
     }
 
     private void initIntent() {
-        Log.d(TAG, "initIntent");
+        if (Constants.DEBUG)
+            Log.d(TAG, "initIntent");
         Bundle bundle = getIntent().getBundleExtra("VODEXTRA");
         playRecode = (VodRecode) bundle.get("playinfo");
         media = (VideoDetailInfo) bundle.get("media");
@@ -540,7 +544,8 @@ public class VodPlayer extends BaseActivity implements
 
             })).start();
         } else {
-            Log.d(TAG, media.toString());
+            if (Constants.DEBUG)
+                Log.d(TAG, media.toString());
             initData();
             playVideo();
         }
@@ -560,7 +565,8 @@ public class VodPlayer extends BaseActivity implements
         cir_gif = (ImageView) findViewById(R.id.loading_cir);
         gif = (AnimationDrawable) num_gif.getDrawable();
         gif.start();
-        Log.d(TAG, "init");
+        if (Constants.DEBUG)
+            Log.d(TAG, "init");
         animation = (AnimationSet) AnimationUtils.loadAnimation(this,
                 R.anim.rotate);
         cir_gif.setAnimation(animation);
@@ -642,12 +648,14 @@ public class VodPlayer extends BaseActivity implements
             s = videoplayurl.playurl;
             sharpness = videoplayurl.sharp;
         }
-        Log.d(TAG, "matchSetandPlay [" + s + "]");
+        if (Constants.DEBUG)
+            Log.d(TAG, "matchSetandPlay [" + s + "]");
         mHandler.sendMessage(mHandler.obtainMessage(MSG_PLAY, s));
     }
 
     private void playVideo() {
-        Log.d(TAG, "playVideo");
+        if (Constants.DEBUG)
+            Log.d(TAG, "playVideo");
         ctrBotSetVideoName((VideoSource) media.playlist
                 .get(playRecode.sourceIndex));
         hdHeadValue = 3;
@@ -657,7 +665,8 @@ public class VodPlayer extends BaseActivity implements
             SuitSharp(arraylist);
             matchSetandPlay(arraylist);
             for (int i = 0; i < arraylist.size(); i++) {
-                Log.d(TAG, arraylist.get(i).toString());
+                if (Constants.DEBUG)
+                    Log.d(TAG, arraylist.get(i).toString());
             }
         } else {
             MyApp.pool.execute(runnable);
@@ -812,9 +821,10 @@ public class VodPlayer extends BaseActivity implements
     }
 
     public boolean onError(MediaPlayer mediaplayer, int i, int j) {
-        Log.i(TAG,
-                (new StringBuilder("onError : what = ")).append(i)
-                        .append(" , extra = ").append(j).toString());
+        if (Constants.DEBUG)
+            Log.i(TAG,
+                    (new StringBuilder("onError : what = ")).append(i)
+                            .append(" , extra = ").append(j).toString());
         try {
             playRecode.positon = mediaplayer.getCurrentPosition();
         } catch (NullPointerException e) {
@@ -830,7 +840,8 @@ public class VodPlayer extends BaseActivity implements
     }
 
     public boolean onKeyDown(int keyCode, KeyEvent keyevent) {
-        Log.d(TAG, "onkey_down  = " + keyCode);
+        if (Constants.DEBUG)
+            Log.d(TAG, "onkey_down  = " + keyCode);
         boolean flag;
         flag = true;
         int j;

@@ -1,4 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="3"
+    android:versionName="1.0.3"
     package="cn.leo.dcinema">
 
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
