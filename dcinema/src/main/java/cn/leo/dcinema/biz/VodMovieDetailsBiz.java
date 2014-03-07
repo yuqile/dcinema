@@ -87,7 +87,8 @@ public class VodMovieDetailsBiz {
                 .append(KEY_DETAILS).append(KEY_TONKEN)
                 .append(KEY_ISCHECK)
                 .toString();
-        Log.d(TAG, (new StringBuffer("url=")).append(url).toString());
+        if (Constants.DEBUG)
+            Log.d(TAG, (new StringBuffer("url=")).append(url).toString());
         String s1 = HttpUtils.getContent(url, null, null);
         if (s1 != null) {
             try {

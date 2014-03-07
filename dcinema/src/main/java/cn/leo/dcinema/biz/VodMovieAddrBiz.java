@@ -10,6 +10,7 @@ import org.xmlpull.v1.XmlPullParserException;
 
 import android.util.Log;
 
+import cn.leo.dcinema.Constants;
 import cn.leo.dcinema.https.HttpUtils;
 import cn.leo.dcinema.model.SharpnessEnum;
 import cn.leo.dcinema.model.VideoPlayUrl;
@@ -42,10 +43,9 @@ public class VodMovieAddrBiz {
 
     private static VodMoiveAddr parseVod(String url) {
         VodMoiveAddr vodMoiveAddr = null;
-
-        Log.d(TAG, (new StringBuffer("url=")).append(url).toString());
+        if (Constants.DEBUG)
+            Log.d(TAG, (new StringBuffer("url=")).append(url).toString());
         HashMap<String, String> map = null;
-
         String s1 = HttpUtils.getContent(url, null, null);
         if (s1 != null) {
             try {
@@ -60,9 +60,7 @@ public class VodMovieAddrBiz {
                 Log.e(TAG, e.toString());
             }
         }
-
         return vodMoiveAddr;
-
     }
 
 
@@ -87,29 +85,22 @@ public class VodMovieAddrBiz {
                 if (recommends != null) {
                     for (XmlElement element : recommends) {
                         String name = element.getName();
-                        Log.d(TAG, "xml name :" + name);
                         if (KEY_MEDIAS.equals(name)) {
                             List<XmlElement> medias = element.getAllChildren();
                             for (XmlElement media : medias) {
                                 name = media.getName();
-
-                                Log.d(TAG, "xml name :" + name);
                                 if (KEY_MEDIA.equals(name)) {
                                     List<XmlElement> segs = media.getAllChildren();
                                     for (XmlElement seg : segs) {
                                         name = seg.getName();
-                                        Log.d(TAG, "xml name :" + name);
                                         if (KEY_SEG.equals(name)) {
                                             List<XmlElement> segitem = seg.getAllChildren();
                                             name = seg.getName();
-                                            Log.d(TAG, "xml name :" + name);
                                             for (XmlElement url : segitem) {
                                                 name = url.getName();
                                                 value = url.getText();
-                                                Log.d(TAG, "xml name :" + name);
                                                 if (KEY_NEWURL.equals(name) || KEY_URL.equals(name)) {
                                                     item.put(name, value);
-                                                    Log.d(TAG, "xml value :" + value);
                                                 }
                                             }
                                             break;

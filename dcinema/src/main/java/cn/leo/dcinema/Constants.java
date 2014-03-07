@@ -9,6 +9,8 @@ public interface Constants {
 	public static final String ApkUpdatebiz_ACTION = "cn.leo.dcinema.ACTION.ApkUpdate";
 	public static final String APP_DB_CHANGE = "cn.leo.dcinema.app_db_change";
 
+    public static final boolean DEBUG = false;
+
 	public static int diaAppLayoutH = 600;
 	public static int diaAppLayoutW = 800;
 

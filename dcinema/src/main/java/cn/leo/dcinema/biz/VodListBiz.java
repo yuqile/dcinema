@@ -1,8 +1,12 @@
 package cn.leo.dcinema.biz;
 
 import java.util.ArrayList;
+
 import org.codehaus.jackson.map.ObjectMapper;
+
 import android.util.Log;
+
+import cn.leo.dcinema.Constants;
 import cn.leo.dcinema.https.HttpUtils;
 import cn.leo.dcinema.model.VideoInfo;
 import cn.leo.dcinema.model.VideoList;
@@ -24,7 +28,8 @@ public class VodListBiz {
 
     public static VideoList parseVodListData(int page, int pageSize) {
         VideoList videolist = null;
-        Log.d(TAG, "page =" + page);
+        if (Constants.DEBUG)
+            Log.d(TAG, "page =" + page);
         VodList vodlist = parse(page, pageSize);
         if (vodlist != null) {
             videolist = new VideoList();
@@ -46,7 +51,7 @@ public class VodListBiz {
             vodlist.albums = null;
             vodlist = null;
         }
-        if (videolist != null)
+        if (videolist != null && Constants.DEBUG)
             Log.d(TAG, videolist.toString());
         return videolist;
     }
@@ -62,7 +67,8 @@ public class VodListBiz {
                 .append(KEY_ORDER).append(TOKEN_STR)
                 .append(KEY_SEARCHZZALBUM).append(TOKEN_STR)
                 .append(KEY_PAGESIZE).append(pageSize).toString();
-        Log.d(TAG, (new StringBuffer("url=")).append(url).toString());
+        if (Constants.DEBUG)
+            Log.d(TAG, (new StringBuffer("url=")).append(url).toString());
 
         String s1 = HttpUtils.getContent(url, null, null);
         if (s1 != null) {
