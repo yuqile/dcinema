@@ -2,6 +2,11 @@ package cn.leo.dcinema.biz;
 
 import android.content.Context;
 import android.util.Log;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import cn.leo.dcinema.https.HttpClientHelper;
 import cn.leo.dcinema.https.HttpUtils;
 import cn.leo.dcinema.model.VideoInfo;
@@ -18,9 +23,7 @@ import java.util.Iterator;
 import java.util.Map;
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
-import org.codehaus.jackson.JsonNode;
-import org.codehaus.jackson.JsonProcessingException;
-import org.codehaus.jackson.map.ObjectMapper;
+
 
 public class VideoCateBiz {
 	private static final String TAG = "VideoCateBiz";

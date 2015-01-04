@@ -1,8 +1,10 @@
 package cn.leo.dcinema.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.io.Serializable;
 import java.util.ArrayList;
-import org.codehaus.jackson.annotate.JsonProperty;
+
 
 public class VideoSource implements Serializable {
 	private static final long serialVersionUID = 4134329126322121094L;

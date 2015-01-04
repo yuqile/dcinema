@@ -1,6 +1,7 @@
 package cn.leo.dcinema.model.ned;
 
-import org.codehaus.jackson.annotate.JsonProperty;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.ArrayList;
 

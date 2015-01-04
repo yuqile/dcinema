@@ -7,8 +7,8 @@
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
           <set>
-            <option value="E:\work\dcinema" />
-            <option value="E:\work\dcinema\dcinema" />
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/dcinema" />
           </set>
         </option>
       </GradleProjectSettings>

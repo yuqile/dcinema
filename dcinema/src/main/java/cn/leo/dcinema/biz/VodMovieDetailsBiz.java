@@ -2,9 +2,10 @@ package cn.leo.dcinema.biz;
 
 import java.util.ArrayList;
 
-import org.codehaus.jackson.map.ObjectMapper;
-
 import android.util.Log;
+
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import cn.leo.dcinema.Constants;
 import cn.leo.dcinema.https.HttpUtils;
@@ -22,7 +23,7 @@ public class VodMovieDetailsBiz {
     public static final String KEY_TONKEN = "&";
 
 
-    private static final String TAG = "VodListBiz";
+    private static final String TAG = "VodMovieDetailsBiz";
     private static String series = "1";
 
     public static VideoDetailInfo parseVodListData(int iptvAlbumId) {
@@ -92,7 +93,9 @@ public class VodMovieDetailsBiz {
         String s1 = HttpUtils.getContent(url, null, null);
         if (s1 != null) {
             try {
-                vodMovie = (new ObjectMapper()).readValue(s1,
+                ObjectMapper objM = new ObjectMapper();
+                objM.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+                vodMovie = objM.readValue(s1,
                         VodMoiveDetails.class);
             } catch (Exception e) {
                 Log.e(TAG, e.toString());

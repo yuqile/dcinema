@@ -3,9 +3,11 @@ package cn.leo.dcinema.biz;
 import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.FileOutputStream;
-import org.codehaus.jackson.map.ObjectMapper;
 import android.content.Context;
 import android.util.Log;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import cn.leo.dcinema.Constants;
 import cn.leo.dcinema.https.HttpUtils;
 import cn.leo.dcinema.model.ApkUpdateInfo;
@@ -71,6 +73,7 @@ public class ApkUpdatebiz {
 			else {
 				Log.d(TAG, s2);
 				try {
+
 					apkupdateinfo = (ApkUpdateInfo) (new ObjectMapper())
 							.readValue(s2, ApkUpdateInfo.class);
 				} catch (Exception e) {

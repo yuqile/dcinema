@@ -1,15 +1,17 @@
 package cn.leo.dcinema.biz;
 
 import android.util.Log;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import cn.leo.dcinema.https.HttpUtils;
 import cn.leo.dcinema.model.VideoInfo;
 import cn.leo.dcinema.model.VideoList;
 import java.io.IOException;
-import java.io.PrintStream;
 import java.util.Iterator;
-import org.codehaus.jackson.JsonNode;
-import org.codehaus.jackson.JsonProcessingException;
-import org.codehaus.jackson.map.ObjectMapper;
+
 
 @SuppressWarnings("unused")
 public class SerachBiz {

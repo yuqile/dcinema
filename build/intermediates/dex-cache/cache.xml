@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/yule/AndroidStudioProjects/dcinema/dcinema/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.2/libs/internal_impl-21.0.2.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="962e8b12569c56dbdcf8367eb4eac8bb129cd18f">
+        <dex dex="/Users/yule/AndroidStudioProjects/dcinema/dcinema/build/intermediates/pre-dexed/debug/internal_impl-21.0.2-4702ea7a4055084392f162da8251ae72cabc2443.jar" />
+    </item>
+    <item
+        jar="/Users/yule/AndroidStudioProjects/dcinema/dcinema/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.2/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="d1bf02de1c56d942e7a9d093b8610ba1ef4128e3">
+        <dex dex="/Users/yule/AndroidStudioProjects/dcinema/dcinema/build/intermediates/pre-dexed/debug/classes-1152899d26a2d3ec24c3d0539bf98c6417308963.jar" />
+    </item>
+    <item
+        jar="/Users/yule/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.2.2/285cb9c666f0f0f3dd8a1be04e1f457eb7b15113/jackson-annotations-2.2.2.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="285cb9c666f0f0f3dd8a1be04e1f457eb7b15113">
+        <dex dex="/Users/yule/AndroidStudioProjects/dcinema/dcinema/build/intermediates/pre-dexed/debug/jackson-annotations-2.2.2-a800949a6824be0c2727fb4b082fb5c52331fbc1.jar" />
+    </item>
+    <item
+        jar="/Users/yule/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.2.2/d20be6a5ddd6f8cfd36ebf6dea329873a1c41f1b/jackson-core-2.2.2.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="d20be6a5ddd6f8cfd36ebf6dea329873a1c41f1b">
+        <dex dex="/Users/yule/AndroidStudioProjects/dcinema/dcinema/build/intermediates/pre-dexed/debug/jackson-core-2.2.2-e4346335c1d420c89c608e41bce690b7263cace0.jar" />
+    </item>
+    <item
+        jar="/Users/yule/AndroidStudioProjects/dcinema/dcinema/libs/umeng_sdk.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="802c0ce4e6c5a3f1e446835823768df7a2a851c5">
+        <dex dex="/Users/yule/AndroidStudioProjects/dcinema/dcinema/build/intermediates/pre-dexed/debug/umeng_sdk-85220976e9d37599597d03e8dacd5960464b6f45.jar" />
+    </item>
+    <item
+        jar="/Users/yule/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.2/support-annotations-21.0.2.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="99373741f99a0556ee293c41e8faa1ca3ae8a4e6">
+        <dex dex="/Users/yule/AndroidStudioProjects/dcinema/dcinema/build/intermediates/pre-dexed/debug/support-annotations-21.0.2-67b319ad4891d54b9c822ef9315186320dc08eec.jar" />
+    </item>
+    <item
+        jar="/Users/yule/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.2.2/3c8f6018eaa72d43b261181e801e6f8676c16ef6/jackson-databind-2.2.2.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="3c8f6018eaa72d43b261181e801e6f8676c16ef6">
+        <dex dex="/Users/yule/AndroidStudioProjects/dcinema/dcinema/build/intermediates/pre-dexed/debug/jackson-databind-2.2.2-f370ca36a581506353c951782bf4f56c1f943847.jar" />
+    </item>
+
+</items>

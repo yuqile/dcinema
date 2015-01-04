@@ -1,27 +1,57 @@
-apply plugin: 'android'
+apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 19
-    buildToolsVersion "19.0.2"
+    buildToolsVersion '19.1.0'
 
     defaultConfig {
         minSdkVersion 11
         targetSdkVersion 19
-        versionCode 3
-        versionName "1.0.3"
+        versionCode 104
+        versionName "1.0.4"
+    }
+    File signFile = rootProject.file('sign/testkey')
+    if (signFile.exists()) {
+        Properties properties = new Properties()
+        properties.load(new FileInputStream(signFile))
+        signingConfigs {
+            release {
+                storeFile file(signFile)
+                storePassword "wugui521"
+                keyAlias "testkey"
+                keyPassword "wugui521"
+            }
+        }
     }
     buildTypes {
         release {
-            runProguard false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+            proguardFiles 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
         }
     }
     packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
         exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+    android {
+        lintOptions {
+            checkReleaseBuilds false
+            // Or, if you prefer, you can continue to check for errors in release builds,
+            // but continue the build even when errors are found:
+            abortOnError false
+        }
     }
 }
 
 dependencies {
-    compile 'com.android.support:appcompat-v7:+'
     compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.fasterxml.jackson.core:jackson-core:2.2.2'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.2.2'
+    compile 'com.fasterxml.jackson.core:jackson-annotations:2.2.2'
+    compile 'com.android.support:support-v4:21.0.2'
 }

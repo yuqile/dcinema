@@ -1,7 +1,7 @@
 package cn.leo.dcinema;
 
 public interface Constants {
-	public static final String updateDataJSONUrl = "http://115.28.17.15/3dcinemaupdate.json";
+	public static final String updateDataJSONUrl = "http://update.holatek.cn/data/3dcinema.json";
 	public static final long updateCheckTime = 3600000L;
 	public static final String ACTION = "cn.leo.dcinema.action.MY_ACTION";
 

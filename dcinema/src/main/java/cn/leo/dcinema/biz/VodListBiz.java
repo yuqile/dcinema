@@ -2,9 +2,10 @@ package cn.leo.dcinema.biz;
 
 import java.util.ArrayList;
 
-import org.codehaus.jackson.map.ObjectMapper;
-
 import android.util.Log;
+
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import cn.leo.dcinema.Constants;
 import cn.leo.dcinema.https.HttpUtils;
@@ -77,7 +78,9 @@ public class VodListBiz {
         String s1 = HttpUtils.getContent(url, null, null);
         if (s1 != null) {
             try {
-                vodlist = (new ObjectMapper()).readValue(s1, VodList.class);
+                ObjectMapper objM = new ObjectMapper();
+                objM.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+                vodlist = (objM.readValue(s1, VodList.class));
             } catch (Exception e) {
                 Log.e(TAG, e.toString());
             }
