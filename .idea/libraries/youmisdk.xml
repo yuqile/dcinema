@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="youmisdk">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dcinema/libs/youmisdk.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

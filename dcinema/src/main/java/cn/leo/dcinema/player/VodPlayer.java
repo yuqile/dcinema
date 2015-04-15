@@ -18,6 +18,9 @@ import android.view.animation.Animation.AnimationListener;
 import android.view.animation.AnimationSet;
 import android.view.animation.AnimationUtils;
 import android.widget.*;
+
+import net.youmi.android.spot.SpotManager;
+
 import cn.leo.dcinema.Constants;
 import cn.leo.dcinema.R;
 import cn.leo.dcinema.activity.BaseActivity;
@@ -268,9 +271,9 @@ public class VodPlayer extends BaseActivity implements
                 // new BasicHeader("Player-HD", (new StringBuilder(String
                 // .valueOf(hdHeadValue))).toString()));
                 ArrayList<VideoPlayUrl> arraylist = VodMovieAddrBiz
-                        .parseVodMovieAddr(((VideoSet) ((VideoSource) media.playlist
-                                .get(playRecode.sourceIndex)).sets
-                                .get(playRecode.setIndex)).link);
+                        .parseVodMovieAddr(media.playlist
+                                .get(playRecode.sourceIndex).sets
+                                .get(playRecode.setIndex).link);
                 if (arraylist == null || arraylist.size() == 0) {
                     mHandler.sendEmptyMessage(MSG_ERROR);
                 } else {
@@ -298,6 +301,7 @@ public class VodPlayer extends BaseActivity implements
                                         R.anim.fade_out));
                         num_gif.setVisibility(View.GONE);
                         loading_main_bg.setVisibility(View.GONE);
+                        SpotManager.getInstance(VodPlayer.this).disMiss();
                         break;
                     case MSG_SELECTSET:
                         playRecode.sourceIndex = message.arg1;
@@ -565,6 +569,7 @@ public class VodPlayer extends BaseActivity implements
         cir_gif = (ImageView) findViewById(R.id.loading_cir);
         gif = (AnimationDrawable) num_gif.getDrawable();
         gif.start();
+        SpotManager.getInstance(this).showSpotAds(this);
         if (Constants.DEBUG)
             Log.d(TAG, "init");
         animation = (AnimationSet) AnimationUtils.loadAnimation(this,
@@ -862,14 +867,18 @@ public class VodPlayer extends BaseActivity implements
             if (keyCode != KeyEvent.KEYCODE_HEADSETHOOK
                     && keyCode != KeyEvent.KEYCODE_MEDIA_PLAY_PAUSE) {
                 if (keyCode == KeyEvent.KEYCODE_MEDIA_PLAY) {
-                    if (!mVideoView.isPlaying())
+                    if (!mVideoView.isPlaying()) {
                         mVideoView.start();
+
+                    }
 
                 }
                 if (keyCode == KeyEvent.KEYCODE_MEDIA_STOP
                         || keyCode == KeyEvent.KEYCODE_MEDIA_PAUSE) {
-                    if (mVideoView.isPlaying())
+                    if (mVideoView.isPlaying()) {
                         mVideoView.pause();
+
+                    }
                 }
                 if (keyCode == KeyEvent.KEYCODE_DPAD_UP) {
                     call_Audio(ADD_VOICE);
@@ -879,14 +888,18 @@ public class VodPlayer extends BaseActivity implements
                 }
                 if (keyCode == KeyEvent.KEYCODE_DPAD_CENTER
                         || keyCode == KeyEvent.KEYCODE_ENTER) {
+                    SpotManager.getInstance(this).disMiss();
                     // ctrbot.show();
                     if (mVideoView.isPlaying()) {
                         mHandler.removeMessages(MSG_DISMISS_POP);
+                        SpotManager.getInstance(this).showSpotAds(VodPlayer.this);
                         hintPoptext.setText("暂停");
                         hintPop.showAtLocation(mVideoView, 17, 0, 0);
                         mVideoView.pause();
+
                     } else {
                         hintPoptext.setText("继续");
+                        SpotManager.getInstance(this).disMiss();
                         hintPop.showAtLocation(mVideoView, Gravity.CENTER, 0, 0);
                         mHandler.sendEmptyMessageDelayed(MSG_DISMISS_POP, 2000);
                         mVideoView.start();
@@ -927,7 +940,7 @@ public class VodPlayer extends BaseActivity implements
     }
 
     private void call_Audio(int audio) {
-        AudioManager audiomanager = (AudioManager) getSystemService("audio");
+        AudioManager audiomanager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
         switch (audio) {
             case INDUCE_VOICE:
                 audiomanager.adjustStreamVolume(3, -1, 1);
@@ -1063,4 +1076,5 @@ public class VodPlayer extends BaseActivity implements
     private TextView hintPoptext;
     private View loading_main_bg;
     private ImageButton loading_again;
+
 }

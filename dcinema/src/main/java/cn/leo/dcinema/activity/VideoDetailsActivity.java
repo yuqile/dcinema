@@ -15,6 +15,8 @@ import android.view.ViewGroup.LayoutParams;
 import android.view.animation.AnimationUtils;
 import android.widget.*;
 
+import net.youmi.android.spot.SpotManager;
+
 import cn.leo.dcinema.Constants;
 import cn.leo.dcinema.R;
 import cn.leo.dcinema.adapters.*;
