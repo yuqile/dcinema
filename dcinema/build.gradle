@@ -10,23 +10,9 @@ android {
         versionCode 105
         versionName "1.0.5"
     }
-    File signFile = rootProject.file('sign/testkey')
-    if (signFile.exists()) {
-        Properties properties = new Properties()
-        properties.load(new FileInputStream(signFile))
-        signingConfigs {
-            release {
-                storeFile file(signFile)
-                storePassword "wugui521"
-                keyAlias "testkey"
-                keyPassword "wugui521"
-            }
-        }
-    }
     buildTypes {
         release {
             proguardFiles 'proguard-rules.pro'
-            signingConfig signingConfigs.release
         }
         debug {
         }
