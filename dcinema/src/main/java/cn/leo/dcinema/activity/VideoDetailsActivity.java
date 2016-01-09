@@ -15,6 +15,10 @@ import android.view.ViewGroup.LayoutParams;
 import android.view.animation.AnimationUtils;
 import android.widget.*;
 
+import com.fasterxml.jackson.core.JsonEncoding;
+import com.fasterxml.jackson.core.JsonGenerator;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import net.youmi.android.spot.SpotManager;
 
 import cn.leo.dcinema.Constants;
@@ -29,6 +33,7 @@ import cn.leo.dcinema.player.VodPlayer;
 import cn.leo.dcinema.util.BitmapWorkerTask;
 import cn.leo.dcinema.util.StringUtil;
 
+import java.io.IOException;
 import java.lang.ref.WeakReference;
 import java.util.*;
 
@@ -253,6 +258,20 @@ public class VideoDetailsActivity extends BaseActivity implements
 
     private void showDetailInfo() {
         if (media != null) {
+            try {
+                ObjectMapper  objectMapper = new ObjectMapper();
+                JsonGenerator jsonGenerator = objectMapper.getJsonFactory().createJsonGenerator(System.out, JsonEncoding.UTF8);
+                System.out.println("jsonGenerator");
+                //writeObject可以转换java对象，eg:JavaBean/Map/List/Array等
+                jsonGenerator.writeObject(media);
+                System.out.println();
+
+                System.out.println("ObjectMapper");
+                //writeValue具有和writeObject相同的功能
+                objectMapper.writeValue(System.out, media);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             // if (!media.banben.contains("更新")) {
             // if (dbHelper.queryHasRecode(media.id, 1)) {
             // colection

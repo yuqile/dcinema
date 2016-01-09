@@ -16,7 +16,7 @@ import cn.leo.dcinema.model.VideoSource;
 import cn.leo.dcinema.model.ned.VodMoiveDetails;
 
 public class VodMovieDetailsBiz {
-    public static final String VodMovieDetailsGetUrl = "http://www.videozaixian.com/cmsapi/albums/";
+        public static final String VodMovieDetailsGetUrl = "http://www.videozaixian.com/cmsapi/albums/";
     public static final String KEY_STR_QUESTION = "?";
     public static final String KEY_DETAILS = "withVideoDetails=false"; //为true时可以获得相关的影片
     public static final String KEY_ISCHECK = "isChecked=1";
